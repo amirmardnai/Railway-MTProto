@@ -25,8 +25,8 @@ with open("config.json", "w") as f:
     json.dump(config, f, indent=2)
 
 print(f"=========================================")
-print(f"Starting Xray MTProto proxy on port {port}")
+print(f"Starting V2Ray MTProto proxy on port {port}")
 print(f"Secret: {secret}")
 print(f"=========================================")
 
-subprocess.run(["xray", "-c", "config.json"])
+subprocess.run(["v2ray", "-config", "config.json"])
